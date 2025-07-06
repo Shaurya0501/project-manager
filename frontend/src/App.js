@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import CreateProject from './pages/CreateProject';
+import ProjectDetails from './pages/ProjectDetails';
 import './App.css';
 
 // Protected Route Component
@@ -50,6 +51,11 @@ const AppRoutes = () => {
       <Route path="/projects/new" element={
         <ProtectedRoute>
           <CreateProject />
+        </ProtectedRoute>
+      } />
+      <Route path="/projects/:projectId" element={
+        <ProtectedRoute>
+          <ProjectDetails />
         </ProtectedRoute>
       } />
       <Route path="/" element={<Navigate to="/dashboard" />} />

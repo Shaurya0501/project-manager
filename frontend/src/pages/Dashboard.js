@@ -133,8 +133,8 @@ const Dashboard = () => {
                   <div className="project-owner">
                     Owner: {project.owner?.name}
                   </div>
-                  <Link to={`/projects/${project._id}`} className="view-project-btn">
-                    View Details
+                  <Link to={`/projects/${project._id}`} className="edit-project-btn">
+                    Edit Project
                   </Link>
                 </div>
               </div>

@@ -34,9 +34,15 @@ const getProject = async (req, res) => {
       return res.status(404).json({ message: 'Project not found' });
     }
 
-    // Check if user has access to project
-    if (project.owner.toString() !== req.user._id.toString() && 
-        !project.members.some(member => member._id.toString() === req.user._id.toString())) {
+    // Robust owner/member check
+    const userId = req.user._id.toString();
+    const ownerId = project.owner._id ? project.owner._id.toString() : project.owner.toString();
+    const isOwner = ownerId === userId;
+    const isMember = project.members.some(member =>
+      (member._id ? member._id.toString() : member.toString()) === userId
+    );
+
+    if (!isOwner && !isMember) {
       return res.status(401).json({ message: 'Not authorized' });
     }
 
