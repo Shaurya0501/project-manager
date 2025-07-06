@@ -1,0 +1,44 @@
+/* Styles for Analytics page */
+.projects-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-list li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.projects-list li a {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.projects-list li a:hover {
+  color: #4a5bdc;
+}
+
+.loading, .error-message {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}

@@ -6,6 +6,11 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import CreateProject from './pages/CreateProject';
 import ProjectDetails from './pages/ProjectDetails';
+import Projects from './pages/Projects';
+import Tasks from './pages/Tasks';
+import Team from './pages/Team';
+import Analytics from './pages/Analytics';
+import Settings from './pages/Settings';
 import './App.css';
 
 // Protected Route Component
@@ -46,6 +51,31 @@ const AppRoutes = () => {
       <Route path="/dashboard" element={
         <ProtectedRoute>
           <Dashboard />
+        </ProtectedRoute>
+      } />
+      <Route path="/projects" element={
+        <ProtectedRoute>
+          <Projects />
+        </ProtectedRoute>
+      } />
+      <Route path="/tasks" element={
+        <ProtectedRoute>
+          <Tasks />
+        </ProtectedRoute>
+      } />
+      <Route path="/team" element={
+        <ProtectedRoute>
+          <Team />
+        </ProtectedRoute>
+      } />
+      <Route path="/analytics" element={
+        <ProtectedRoute>
+          <Analytics />
+        </ProtectedRoute>
+      } />
+      <Route path="/settings" element={
+        <ProtectedRoute>
+          <Settings />
         </ProtectedRoute>
       } />
       <Route path="/projects/new" element={
