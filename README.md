@@ -1,7 +1,5 @@
 # Project Manager - Fullstack Web Application
-
-# Deployment Link-https://project-manager-frontend-qhd8.onrender.com
-A modern project management web application built with Node.js, Express.js, MongoDB, and React.js.
+🔗 **Live Deployment:** https://project-manager-frontend-qhd8.onrender.com
 
 ## Features
 
